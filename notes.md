@@ -26,6 +26,30 @@ Postup, ako sa dostať do Githubu (terminal):
 Vypísala sa mi chyba. Z toho dôvodu trebalo nájsť zdroj problému. Zdroj problému bol v kóde, keďže bol použitý apostrof. Po opravení sme znova spustili konfiguráciu npm run build a potom sme zosynchronizovali všetky informácie s Gitom, a následne Vercelom.
 
 
+1. Vercel -> Storage:
+    Neon -> Create -> Accept -> Region -> Frankfurt, Germany-(fra1) -> Connect
+    in snap-zoska-4h-postgres:
+    .env.local -> Show secret -> Copy snippet into your src/.env 
+
+2. VsCode:
+    npm install @prisma/client @auth/prisma-adapter
+    npm install prisma --save-dev
+    npx prisma init
+
+3. VsCode:
+    In .env replace value of DATABASE_URL
+    .env
+    package.json:   "build": "prisma generate && next build",
+                    "postinstall": "prisma generate"
+
+
+4. VsCode terminal:
+    npx prisma format
+    npx prisma migrate dev --name init
+    npx prisma generate
+    npx prisma studio
+
+
 Assignment: Build a Basic Next.js App with Material UI Menu component
 
 Objective: Your task is to create a simple Next.js app with basic routing via Material UI Menu component. You will set up Git and a GitHub repository to manage your version control. The app will not include any authentication.
