@@ -1,17 +1,17 @@
+// src/app/o-nas/page.tsx
 
-// src/app/o-mne/page.tsx
 
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 
-import  Typography from "@mui/material/Typography";
-import { Container } from "@mui/material";
+export const metadata = { title: "O nás | ZoškaSnap" };
 
-export default function About() {
+export default function AboutUs() {
 
   return (
-        <Container>
-            <Typography> Stránka o mne </Typography>
-        </Container>
-  )      
-     
+    <Container>
+      <Typography> Stránka o mne </Typography>
+    </Container>
+  );
 }
 
